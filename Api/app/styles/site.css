@@ -1,0 +1,30 @@
+﻿.footer {
+    margin-top: 20px;
+    border-top: 2px solid gray;
+}
+
+.circle {
+    margin-top: 10px;
+    border: 1px dotted gray;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.notLastCircle {
+    background-color: red;
+    border: 1px dotted red;
+}
+
+.lastCircle {
+    background-color: green;
+    border: 1px dotted green;
+}
+
+.circle .center {
+    position: relative;
+    left: 18%;
+    top: 15%;
+    font-size: 20px;
+}
