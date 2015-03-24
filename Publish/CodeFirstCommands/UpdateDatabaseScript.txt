@@ -1,0 +1,1 @@
+﻿Update-Database -ProjectName Database.Publish -StartUpProjectName Database.Publish -ConfigurationTypeName Configuration -TargetMigration InitialCreate -Script

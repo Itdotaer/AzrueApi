@@ -1,0 +1,42 @@
+﻿<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Method(HTTP)</th>
+                <th>BaseURL</th>
+                <th>Controller</th>
+                <th>Action</th>
+                <th>FullApiURL</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td>{{baseUrl}}</td>
+                <td>UsersController</td>
+                <td>GetUsers</td>
+                <td>{{baseUrl + '/api/Users?json=true'}}</td>
+                <td>
+                    <a ui-sref="users.getUsers">Go</a>
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>{{baseUrl}}</td>
+                <td>UsersController</td>
+                <td>PostUser</td>
+                <td>{{baseUrl + '/api/Users'}}</td>
+                <td>
+                    <a ui-sref="users.addUser">Go</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="usersBorder">
+        <div ui-view></div>
+    </div>
+    <h3>Log:</h3>
+    <div ng-repeat="log in logList">{{log}}</div>
+</div>

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app="InterestingThings">
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Instant Answers" name="description">
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="app/vendor/bootstrap/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" type="text/css" href="app/vendor/bootstrap/css/bootstrap.Superhero.min.css" />-->
+    <link rel="stylesheet" type="text/css" href="app/styles/site.css" />
+
+    <title>Interesting Things</title>
+</head>
+<body ng-controller="appController">
+    <div class="container">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <span style="font-size: 30px;">
+                            Interesting Things
+                        </span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a ui-sref="demoGame">Demo Game</a>
+                        </li>
+                        <li>
+                            <a ui-sref="users">Users</a>
+                        </li>
+                        <li>
+                            <a ui-sref="blobs">Blobs</a>
+                        </li>
+                        <li>
+                            <a ui-sref="fileUpload">Upload Files</a>
+                        </li>
+                        <li>
+                            <a ui-sref="test">Test Directives</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ui-view style="margin-top:50px;"></div>
+        <div class="footer">
+            <p>
+                © Microsoft {{sysYear}}
+                <span style="float: right;">
+                    Powered By: <a href="http://itdotaer.herokuapp.com">Harry Hu</a>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!--Start JavaScripts-->
+    <script type="text/javascript" src="app/vendor/angularJS/angular.js"></script>
+    <script src="https://rawgithub.com/Breeze/breeze.js/master/build/breeze.debug.js"></script>
+    <script src="https://rawgithub.com/Breeze/breeze.js.labs/master/breeze.angular.js"></script>
+    <script src="/app/vendor/fileUpload/angular-file-upload-shim.js"></script>
+    <script src="/app/vendor/fileUpload/angular-file-upload.js"></script>
+    <script type="text/javascript" src="app/vendor/angularJS/angular-ui-router.js"></script>
+    <script type="text/javascript" src="app/vendor/angularJS/angular-animate.js"></script>
+    <script type="text/javascript" src="app/vendor/angularJS/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="app/vendor/jQuery/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    
+    <script type="text/javascript" src="/app/scripts/app.js"></script>
+    <script type="text/javascript" src="/app/scripts/services/logger.js"></script>
+    <script type="text/javascript" src="/app/scripts/services/sysSettings.js"></script>
+    <script type="text/javascript" src="/app/scripts/services/breeze/dataContext.js"></script>
+    <script type="text/javascript" src="/app/scripts/services/userService.js"></script>
+    <script type="text/javascript" src="/app/scripts/services/blobService.js"></script>
+    
+    <script type="text/javascript" src="/app/scripts/controllers/appController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/demoController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/user/usersController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/user/allUsersController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/user/userController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/blob/blobsController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/blob/blobController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/fileUpload/fileUploadController.js"></script>
+    <script type="text/javascript" src="/app/scripts/controllers/test/testController.js"></script>
+    
+    <script type="text/javascript" src="/app/scripts/directives/usersPanel/userPanelModule.js"></script>
+    <script type="text/javascript" src="/app/scripts/directives/usersPanel/usersPanelCtrl.js"></script>
+    <script type="text/javascript" src="/app/scripts/directives/usersPanel/usersPanelDirective.js"></script>
+    <!--End JavaScripts-->
+</body>
+</html>

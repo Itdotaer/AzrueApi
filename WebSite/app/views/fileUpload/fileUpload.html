@@ -1,0 +1,41 @@
+﻿<h3>watching model:</h3>
+<div class="btn btn-success" ng-file-select ng-model="vm.files" ng-mutiple="true" ng-file-change="vm.initProcessBar()">Upload files</div>
+<h3>drop file:</h3>
+<div ng-file-drop ng-file-select ng-model="vm.files" class="fileSelectBox" drag-over-class="dragover" ng-file-change="vm.initProcessBar()" ng-multiple="true" allow-dir="true" accept="image/*,application/pdf">
+    Drop images or pdfs files here.
+</div>
+<div ng-no-file-drop>File drag/drop is not supported for this browser</div>
+
+<div class="row">
+    <h3>Action:</h3>
+    <button class="btn btn-primary" ng-click="vm.upload()">Upload Files</button>
+</div>
+
+<div class="row">
+    <h3>Status:</h3>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{vm.progressPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': vm.progressPercentage + '%'}">
+            {{vm.progressPercentage}}%
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h3>Files list:</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FileName</th>
+                <th>Size(bytes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="file in vm.files">
+                <td>{{$index}}</td>
+                <td>{{file.name}}</td>
+                <td>{{file.size}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

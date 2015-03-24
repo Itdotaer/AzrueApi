@@ -1,0 +1,1 @@
+﻿Enable-Migrations -ProjectName Database.Publish -StartUpProjectName Database.Publish -ContextProjectName Database.Models -ContextTypeName AzureContext -MigrationsDirectory Migrations\InitialCreate

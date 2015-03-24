@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC56250D-8F7E-4CF4-9CDB-E778A34E8D20}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSite</RootNamespace>
+    <AssemblyName>WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\images\azure-ill.png" />
+    <Content Include="app\images\demoGame.png" />
+    <Content Include="app\images\loading.gif" />
+    <Content Include="app\scripts\app.js" />
+    <Content Include="app\scripts\controllers\appController.js" />
+    <Content Include="app\scripts\controllers\blob\blobController.js" />
+    <Content Include="app\scripts\controllers\blob\blobsController.js" />
+    <Content Include="app\scripts\controllers\fileUpload\fileUploadController.js" />
+    <Content Include="app\scripts\controllers\test\testController.js" />
+    <Content Include="app\scripts\controllers\user\userController.js" />
+    <Content Include="app\scripts\controllers\user\allUsersController.js" />
+    <Content Include="app\scripts\controllers\user\usersController.js" />
+    <Content Include="app\scripts\controllers\demoController.js" />
+    <Content Include="app\scripts\controllers\mainController.js" />
+    <Content Include="app\scripts\directives\usersPanel\usersPanel.html" />
+    <Content Include="app\scripts\directives\usersPanel\usersPanelCtrl.js" />
+    <Content Include="app\scripts\directives\usersPanel\userPanelModule.js" />
+    <Content Include="app\scripts\directives\usersPanel\usersPanelDirective.js" />
+    <Content Include="app\scripts\services\breeze\dataContext.js" />
+    <Content Include="app\scripts\services\logger.js" />
+    <Content Include="app\scripts\services\sysSettings.js" />
+    <Content Include="app\scripts\services\blobService.js" />
+    <Content Include="app\scripts\services\userService.js" />
+    <Content Include="app\styles\site.css" />
+    <Content Include="app\vendor\angularJS\angular-animate.js" />
+    <Content Include="app\vendor\angularJS\angular-animate.min.js" />
+    <Content Include="app\vendor\angularJS\angular-route.js" />
+    <Content Include="app\vendor\angularJS\angular-route.min.js" />
+    <Content Include="app\vendor\angularJS\angular-sanitize.js" />
+    <Content Include="app\vendor\angularJS\angular-sanitize.min.js" />
+    <Content Include="app\vendor\angularJS\angular-ui-router.js" />
+    <Content Include="app\vendor\angularJS\angular-ui-router.min.js" />
+    <Content Include="app\vendor\angularJS\angular.js" />
+    <Content Include="app\vendor\angularJS\angular.min.js" />
+    <Content Include="app\vendor\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="app\vendor\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="app\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="app\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="app\vendor\bootstrap\css\bootstrap.Superhero.min.css" />
+    <Content Include="app\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="app\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="app\vendor\bootstrap\js\npm.js" />
+    <Content Include="app\vendor\fileUpload\angular-file-upload-shim.js" />
+    <Content Include="app\vendor\fileUpload\angular-file-upload-shim.min.js" />
+    <Content Include="app\vendor\fileUpload\angular-file-upload.js" />
+    <Content Include="app\vendor\fileUpload\angular-file-upload.min.js" />
+    <Content Include="app\vendor\jQuery\jquery-1.11.2.min.js" />
+    <Content Include="app\views\blob\addBlob.html" />
+    <Content Include="app\views\fileUpload\fileUpload.html" />
+    <Content Include="app\views\test\test.html" />
+    <Content Include="app\views\user\addUser.html" />
+    <Content Include="app\views\blob\blobs.html" />
+    <Content Include="app\views\demoGame.html" />
+    <Content Include="app\views\main.html" />
+    <Content Include="app\views\user\allUsers.html" />
+    <Content Include="app\views\user\users.html" />
+    <Content Include="Index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\vendor\angularJS\angular-animate.min.js.map" />
+    <Content Include="app\vendor\angularJS\angular-route.min.js.map" />
+    <Content Include="app\vendor\angularJS\angular-sanitize.min.js.map" />
+    <Content Include="app\vendor\angularJS\angular.min.js.map" />
+    <Content Include="app\vendor\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="app\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="app\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\eco-azurewebsite - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\eco-azurewebsite - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ECO-website - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ECO-website - Web Deploy.pubxml" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\scripts\filters\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>41034</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:41034/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

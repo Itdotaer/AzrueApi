@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-6" style="margin: 10px 0 10px 0;">
+            <div class="input-group">
+                <span class="input-group-addon">彩票数量:</span>
+                <input type="text" class="form-control" placeholder="输入数量..." ng-model="randomCount">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="generateRandomList()">Go!</button>
+                </span>
+            </div>
+        </div>  
+    </div>
+    <div class="row">
+        <label class="label label-default">恭喜，生成彩票如下:</label>
+    </div>
+    <div class="row" ng-repeat="randomNum in randomNumList">
+        <div class="circle" ng-click="getNumList(1)" ng-repeat="random in randomNum.list" ng-class="{'lastCircle' : (random.id == randomNum.list.length - 1), 'notLastCircle' : (random.id != randomNum.length - 1)}">
+            <span class="center">{{random.value}}</span>
+        </div>
+    </div>
+</div>

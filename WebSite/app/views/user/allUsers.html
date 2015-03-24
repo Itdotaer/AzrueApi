@@ -1,0 +1,45 @@
+﻿<div ng-show="isLoading" class="isLoading">
+    <img src="/app/images/loading.gif" alt="isLoading" width="80" height="80" />
+    <div style="width: 90px; height: 40px;">正在加载中...</div>
+</div>
+<table ng-show="!isLoading" class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th>DisplayName</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Tel</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users" ng-click="selected(user.Id)" ng-dblclick="dblClick(user.Id)" ng-class="{rowSelected: user.Id == selectedRowId}">
+            <td>{{user.Id}}</td>
+            <td>{{user.UserName}}</td>
+            <td>{{user.DisplayName}}</td>
+            <td>{{user.Email}}</td>
+            <td>{{user.Password}}</td>
+            <td>{{user.DetailInfo.Age}}</td>
+            <td>{{user.DetailInfo.Sex}}</td>
+            <td>{{user.DetailInfo.Tel}}</td>
+            <td class=" text-center">
+                <a class="btn btn-info" ui-sref="users.getUser({id: user.Id})">Detail</a>
+                <button class="btn btn-info" ui-sref="users.updateUser({id: user.Id})">Edit</button>
+                <button class="btn btn-info" ng-click="deleteUser(user.Id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Panel Directive Demo
+    </div>
+    <div class="panel-body">
+        <users-panel users-data="users"></users-panel>
+    </div>
+</div>
